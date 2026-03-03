@@ -124,7 +124,7 @@ const translations: Record<Locale, Translations> = {
       subtitle:
         "From quick city breaks to exotic long-haul escapes, see where our expertly crafted tours can take you next.",
       fare: "AllTrips Fare",
-      flyTo: (city, miles) => `Fly to ${city} from ${miles} miles`,
+      flyTo: (city, miles) => `Fly to ${city} from ${miles} ₼`,
       cityNames: {
         London: "London",
         Dubai: "Dubai",
@@ -203,7 +203,7 @@ const translations: Record<Locale, Translations> = {
       subtitle:
         "От коротких городских туров до экзотических дальних путешествий — посмотрите, куда вас могут привести наши профессионально составленные туры.",
       fare: "Тариф AllTrips",
-      flyTo: (city, miles) => `Летите в ${city} от ${miles} миль`,
+      flyTo: (city, miles) => `Летите в ${city} от ${miles} ₼`,
       cityNames: {
         London: "Лондон",
         Dubai: "Дубай",
@@ -282,7 +282,7 @@ const translations: Record<Locale, Translations> = {
       subtitle:
         "Qısamüddətli şəhər turlarından tutmuş ekzotik uzaq məsafəli səyahətlərə qədər, ekspertlərimiz tərəfindən hazırlanmış turların sizi hara apara biləcəyini kəşf edin.",
       fare: "AllTrips Tarifi",
-      flyTo: (city, miles) => `${city}-ə ${miles} mildən uçun`,
+      flyTo: (city, miles) => `${city}-ə ${miles} ₼-dən uçun`,
       cityNames: {
         London: "London",
         Dubai: "Dubay",

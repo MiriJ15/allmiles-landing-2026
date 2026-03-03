@@ -53,7 +53,7 @@ export function SiteHeader() {
               key={item.id}
               type="button"
               onClick={() => smoothScrollTo(item.id)}
-              className="inline-flex h-[60px] items-center text-sm font-medium tracking-wide text-slate-900 transition hover:text-slate-700"
+              className="inline-flex h-[60px] items-center text-base font-medium tracking-wide text-slate-900 transition hover:text-slate-700"
             >
               {item.label}
             </button>

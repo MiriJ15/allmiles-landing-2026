@@ -33,9 +33,9 @@ export const metadata: Metadata = {
       "AllTrips is a Baku-based travel agency that plans unforgettable trips to top destinations worldwide. Let us handle flights, hotels, and tours — you just enjoy the journey.",
     images: [
       {
-        url: "/main_background.jpg",
-        width: 1600,
-        height: 900,
+        url: "/metadata.png",
+        width: 1200,
+        height: 630,
         alt: "AllTrips — travel agency based in Baku",
       },
     ],
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     title: "AllTrips | Your Dreams, Our Routes",
     description:
       "AllTrips is a Baku-based travel agency that plans unforgettable trips to top destinations worldwide.",
-    images: ["/main_background.jpg"],
+    images: ["/metadata.png"],
   },
 };
 

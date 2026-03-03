@@ -69,9 +69,9 @@ export function DownloadButton({ href, store }: DownloadButtonProps) {
       rel="noreferrer"
       className="group relative flex w-full items-center justify-center overflow-hidden rounded-2xl p-[1px] sm:w-auto"
     >
-      <span className="animate-shimmer absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-300/50 via-sky-500/60 to-emerald-300/50 opacity-70 transition group-hover:opacity-100" />
+      <span className="animate-shimmer absolute inset-0 rounded-2xl bg-gradient-to-r from-[#FAFA00]/50 via-[#0EAAFD]/60 to-[#0EAAFD]/45 opacity-70 transition group-hover:opacity-100" />
       <span className="glass-panel relative flex w-full min-w-[220px] items-center gap-3 rounded-2xl px-5 py-3.5 text-left sm:w-auto">
-        <span className="rounded-xl bg-slate-100/70 p-2 text-sky-700 transition group-hover:text-sky-800 dark:bg-slate-900/70 dark:text-cyan-200 dark:group-hover:text-cyan-100">
+        <span className="rounded-xl bg-slate-100/70 p-2 text-[#0EAAFD] transition dark:bg-slate-900/70 dark:text-[#0EAAFD]">
           <StoreIcon store={store} />
         </span>
         <span className="flex-1">

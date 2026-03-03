@@ -1,23 +1,25 @@
 import type { Metadata } from "next";
-import { Sora, Space_Grotesk } from "next/font/google";
+import { Archivo, Comfortaa } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import { LanguageProvider } from "@/lib/i18n";
 import "./globals.css";
 
-const headingFont = Sora({
-  subsets: ["latin"],
-  variable: "--font-heading",
-});
-
-const bodyFont = Space_Grotesk({
+const bodyFont = Archivo({
   subsets: ["latin"],
   variable: "--font-body",
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
+
+const brandFont = Comfortaa({
+  subsets: ["latin"],
+  variable: "--font-brand",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {
-  title: "AllMiles | Turn Spending Into Global Adventures",
+  title: "AllTrips | Turn Spending Into Global Adventures",
   description:
-    "AllMiles is a modern fintech travel app that transforms everyday spending into miles you can redeem for flights directly inside the app.",
+    "AllTrips is a modern fintech travel app that transforms everyday spending into miles you can redeem for flights directly inside the app.",
 };
 
 export default function RootLayout({
@@ -28,7 +30,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${headingFont.variable} ${bodyFont.variable} bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased`}
+        className={`${bodyFont.variable} ${brandFont.variable} bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased`}
       >
         <ThemeProvider>
           <LanguageProvider>{children}</LanguageProvider>

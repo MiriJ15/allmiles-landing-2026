@@ -1,8 +1,7 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
-import { Compass } from "lucide-react";
-import { ThemeToggle } from "@/components/theme-toggle";
 import { LanguageSelector } from "@/components/ui/language-selector";
 import { useTranslation } from "@/lib/i18n";
 
@@ -42,10 +41,14 @@ export function SiteHeader() {
           onClick={() => smoothScrollTo("top")}
           className="inline-flex items-center gap-2 text-slate-900 dark:text-white"
         >
-          <span className="inline-flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-300 to-sky-600 text-slate-950">
-            <Compass size={18} />
-          </span>
-          <span className="text-lg font-semibold tracking-tight">AllMiles</span>
+          <Image
+            src="/alltrips_logo.png"
+            alt="AllTrips"
+            height={48}
+            width={160}
+            className="h-12 w-auto object-contain"
+            priority
+          />
         </button>
 
         <nav className="hidden items-center gap-8 md:flex">
@@ -63,7 +66,6 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-2">
           <LanguageSelector />
-          <ThemeToggle />
         </div>
       </div>
     </motion.header>

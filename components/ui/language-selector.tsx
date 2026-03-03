@@ -16,7 +16,7 @@ export function LanguageSelector() {
           onClick={() => setLocale(l)}
           className={`rounded-lg px-2.5 py-1 text-xs font-semibold tracking-widest uppercase transition ${
             locale === l
-              ? "bg-gradient-to-br from-cyan-300 to-sky-500 text-slate-950 shadow-sm"
+              ? "bg-gradient-to-br from-[#FAFA00] to-[#0EAAFD] text-slate-950 shadow-sm"
               : "text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
           }`}
         >

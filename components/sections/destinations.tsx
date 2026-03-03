@@ -74,17 +74,17 @@ export function Destinations() {
                         backgroundPosition: "center",
                       }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950/88 via-slate-900/35 to-transparent transition duration-500 group-hover:from-slate-950/80 group-hover:via-slate-900/35" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition duration-500 group-hover:from-black/60" />
                     <div className="pointer-events-none absolute inset-0 rounded-3xl ring-1 ring-inset ring-white/10" />
 
-                    <div className="glass-panel absolute inset-x-4 bottom-4 rounded-2xl p-4 transition duration-300 group-hover:-translate-y-1 group-hover:border-cyan-300/40">
-                      <p className="text-xs uppercase tracking-[0.18em] text-slate-300">
+                    <div className="absolute inset-x-4 bottom-4 rounded-2xl border border-white/30 bg-white/20 p-4 backdrop-blur-md transition duration-300 group-hover:-translate-y-1 group-hover:border-white/50 group-hover:bg-white/25">
+                      <p className="text-xs uppercase tracking-[0.18em] text-white/75">
                         {t.destinations.fare}
                       </p>
                       <p className="mt-1 text-2xl font-semibold text-white">
                         {destination.city}
                       </p>
-                      <p className="mt-1 text-sm text-slate-200">
+                      <p className="mt-1 text-sm text-white/85">
                         {t.destinations.flyTo(
                           destination.city,
                           destination.miles,

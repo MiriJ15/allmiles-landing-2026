@@ -22,8 +22,8 @@ export function BottomCta() {
           transition={{ duration: 0.75, ease: [0.22, 1, 0.36, 1] }}
           className="glass-panel relative overflow-hidden rounded-[2rem] px-6 py-10 sm:px-12 sm:py-14"
         >
-          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_0%_0%,rgba(56,189,248,0.35),transparent_34%),radial-gradient(circle_at_100%_100%,rgba(16,185,129,0.28),transparent_34%)]" />
-          <p className="text-sm uppercase tracking-[0.26em] text-sky-700 dark:text-cyan-100">
+          <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_0%_0%,rgba(14,170,253,0.35),transparent_34%),radial-gradient(circle_at_100%_100%,rgba(250,250,0,0.18),transparent_34%)]" />
+          <p className="text-sm uppercase tracking-[0.26em] text-[#0EAAFD] dark:text-[#FAFA00]">
             {t.cta.label}
           </p>
           <h2 className="mt-3 max-w-3xl text-[clamp(1.8rem,4.6vw,3.8rem)] font-semibold leading-[0.96] tracking-[-0.03em] text-slate-900 dark:text-white">

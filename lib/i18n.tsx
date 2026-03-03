@@ -106,13 +106,13 @@ const translations: Record<Locale, Translations> = {
         "Cashback converts to miles in real time, with transparent tracking and premium partner boosters built in.",
       step3Title: "Redeem & Fly",
       step3Desc:
-        "Search routes and book flights directly in AllMiles using your balance. Your miles are your ticket.",
+        "Search routes and book flights directly in AllTrips using your balance. Your miles are your ticket.",
     },
     destinations: {
       title: "Popular Destinations",
       subtitle:
         "From city breaks to long-haul escapes, see where your everyday purchases can take you next.",
-      fare: "AllMiles Fare",
+      fare: "AllTrips Fare",
       flyTo: (city, miles) => `Fly to ${city} from ${miles} miles`,
     },
     partners: {
@@ -123,12 +123,12 @@ const translations: Record<Locale, Translations> = {
     cta: {
       label: "Start your journey",
       headline:
-        "Download AllMiles Today and Convert Everyday Spending Into Takeoff Moments.",
+        "Download AllTrips Today and Convert Everyday Spending Into Takeoff Moments.",
       subtitle:
         "Unlock instant miles, premium routes, and a smarter way to travel with every payment you make.",
     },
     footer: {
-      copyright: "© 2026 AllMiles. Crafted for global travelers.",
+      copyright: "© 2026 AllTrips. Crafted for global travelers.",
       terms: "Terms of Service",
       privacy: "Privacy Policy",
     },
@@ -172,13 +172,13 @@ const translations: Record<Locale, Translations> = {
         "Кэшбэк конвертируется в мили в реальном времени с прозрачным отслеживанием и бонусами от премиум-партнёров.",
       step3Title: "Обменяйте и летите",
       step3Desc:
-        "Ищите маршруты и бронируйте авиабилеты прямо в AllMiles, используя свой баланс. Ваши мили — ваш билет.",
+        "Ищите маршруты и бронируйте авиабилеты прямо в AllTrips, используя свой баланс. Ваши мили — ваш билет.",
     },
     destinations: {
       title: "Популярные направления",
       subtitle:
         "От коротких городских поездок до дальних путешествий — узнайте, куда вас могут привести ежедневные покупки.",
-      fare: "Тариф AllMiles",
+      fare: "Тариф AllTrips",
       flyTo: (city, miles) => `Летите в ${city} от ${miles} миль`,
     },
     partners: {
@@ -189,12 +189,12 @@ const translations: Record<Locale, Translations> = {
     cta: {
       label: "Начните своё путешествие",
       headline:
-        "Скачайте AllMiles сегодня и превращайте повседневные траты в моменты взлёта.",
+        "Скачайте AllTrips сегодня и превращайте повседневные траты в моменты взлёта.",
       subtitle:
         "Открывайте мгновенные мили, премиум-маршруты и более умный способ путешествовать с каждым платежом.",
     },
     footer: {
-      copyright: "© 2026 AllMiles. Создано для путешественников со всего мира.",
+      copyright: "© 2026 AllTrips. Создано для путешественников со всего мира.",
       terms: "Условия использования",
       privacy: "Политика конфиденциальности",
     },
@@ -238,13 +238,13 @@ const translations: Record<Locale, Translations> = {
         "Keşbek real vaxt rejimində millərə çevrilir, şəffaf izləmə və premium tərəfdaş bonusları ilə.",
       step3Title: "Xərcləyin və uçun",
       step3Desc:
-        "AllMiles-da marşrutları axtarın və balansınızdan istifadə edərək birbaşa bilet sifariş edin. Milləriniz — biletinizdir.",
+        "AllTrips-da marşrutları axtarın və balansınızdan istifadə edərək birbaşa bilet sifariş edin. Milləriniz — biletinizdir.",
     },
     destinations: {
       title: "Populyar istiqamətlər",
       subtitle:
         "Şəhər gəzintilərindən uzaq məsafəli səfərlərə qədər — gündəlik alış-verişlərinin sizi hara apara biləcəyini görün.",
-      fare: "AllMiles Tarifi",
+      fare: "AllTrips Tarifi",
       flyTo: (city, miles) => `${city}-ə ${miles} mildən uçun`,
     },
     partners: {
@@ -255,12 +255,12 @@ const translations: Record<Locale, Translations> = {
     cta: {
       label: "Səyahətinizə başlayın",
       headline:
-        "AllMiles-ı bu gün yükləyin və gündəlik xərclərinizi qalxış anlarına çevirin.",
+        "AllTrips-ı bu gün yükləyin və gündəlik xərclərinizi qalxış anlarına çevirin.",
       subtitle:
         "Hər ödənişlə ani millər, premium marşrutlar və daha ağıllı səyahət yolunu açın.",
     },
     footer: {
-      copyright: "© 2026 AllMiles. Dünya səyyahları üçün yaradılmışdır.",
+      copyright: "© 2026 AllTrips. Dünya səyyahları üçün yaradılmışdır.",
       terms: "Xidmət şərtləri",
       privacy: "Məxfilik siyasəti",
     },

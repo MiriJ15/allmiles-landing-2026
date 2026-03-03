@@ -73,13 +73,13 @@ export function HowItWorks() {
               return (
                 <Reveal key={step.title} delay={index * 0.1}>
                   <article className="glass-panel group relative min-w-[320px] flex-1 overflow-hidden rounded-3xl p-6 sm:min-w-[360px] sm:p-7 lg:min-w-0">
-                    <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-cyan-300/20 blur-2xl transition duration-300 group-hover:bg-cyan-300/35" />
+                    <div className="absolute -right-14 -top-14 h-36 w-36 rounded-full bg-[#0EAAFD]/15 blur-2xl transition duration-300 group-hover:bg-[#0EAAFD]/25" />
                     <div className="relative flex flex-col items-start gap-5">
                       <div className="flex w-full items-center gap-3">
-                        <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-slate-900/70 text-cyan-200 transition group-hover:-translate-y-0.5 group-hover:text-cyan-100">
+                        <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#0EAAFD]/10 text-[#0EAAFD] transition group-hover:-translate-y-0.5 group-hover:bg-[#0EAAFD]/20">
                           <Icon size={22} />
                         </span>
-                        <div className="inline-flex min-w-[110px] shrink-0 items-center justify-center rounded-xl border border-cyan-300/30 bg-cyan-100/60 px-3 py-2 text-center text-xs font-semibold uppercase tracking-[0.14em] text-sky-800 dark:bg-cyan-400/10 dark:text-cyan-200">
+                        <div className="inline-flex min-w-[110px] shrink-0 items-center justify-center rounded-xl border border-[#0EAAFD]/30 bg-[#0EAAFD]/8 px-3 py-2 text-center text-xs font-semibold uppercase tracking-[0.14em] text-[#0EAAFD] dark:bg-[#0EAAFD]/10 dark:text-[#7dd3fc]">
                           {step.step}
                         </div>
                       </div>

@@ -2,24 +2,34 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* ── Brand tokens ─────────────────────────────────── */
 :root {
+  /* Brand palette */
+  --brand-blue: #0eaafd;
+  --brand-yellow: #fafa00;
+
+  /* Dark mode (default) */
   color-scheme: dark;
-  --bg-primary: #050816;
-  --bg-secondary: #0c142f;
-  --text-primary: #e2e8f0;
-  --text-muted: #b6c2dd;
-  --glass-border: rgba(226, 232, 240, 0.18);
-  --glass-bg: rgba(15, 23, 42, 0.42);
+  --bg-primary: #050c1a;
+  --bg-secondary: #071428;
+  --text-primary: #f0f6ff;
+  --text-muted: #8daac8;
+  --glass-border: rgba(14, 170, 253, 0.18);
+  --glass-bg: rgba(5, 12, 26, 0.55);
+  --accent: #0eaafd;
+  --accent-yellow: #fafa00;
 }
 
 .light {
   color-scheme: light;
-  --bg-primary: #f4f7fb;
-  --bg-secondary: #dbe7f7;
-  --text-primary: #0f172a;
-  --text-muted: #334155;
-  --glass-border: rgba(15, 23, 42, 0.15);
-  --glass-bg: rgba(255, 255, 255, 0.62);
+  --bg-primary: #ffffff;
+  --bg-secondary: #f0f9ff;
+  --text-primary: #050c1a;
+  --text-muted: #4a6080;
+  --glass-border: rgba(14, 170, 253, 0.2);
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --accent: #0eaafd;
+  --accent-yellow: #d4d400;
 }
 
 html {
@@ -31,7 +41,7 @@ section[id] {
 }
 
 body {
-  font-family: var(--font-body), sans-serif;
+  font-family: var(--font-body), "Archivo", sans-serif;
   background-color: var(--bg-primary);
   color: var(--text-primary);
 }
@@ -42,12 +52,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: var(--font-heading), sans-serif;
+  font-family: var(--font-body), "Archivo", sans-serif;
+}
+
+.font-brand {
+  font-family: var(--font-brand), "Comfortaa", sans-serif;
 }
 
 ::selection {
-  background: rgba(56, 189, 248, 0.35);
-  color: #f8fafc;
+  background: rgba(14, 170, 253, 0.35);
+  color: #ffffff;
 }
 
 .container-shell {
@@ -58,6 +72,25 @@ h6 {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(18px);
+}
+
+.brand-gradient {
+  background: linear-gradient(
+    135deg,
+    var(--brand-yellow) 0%,
+    var(--brand-blue) 100%
+  );
+}
+
+.brand-gradient-text {
+  background: linear-gradient(
+    135deg,
+    var(--brand-yellow) 0%,
+    var(--brand-blue) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .section-title {

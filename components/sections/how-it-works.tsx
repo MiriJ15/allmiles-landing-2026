@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { useScroll, useMotionValueEvent } from "framer-motion";
-import { Globe, PlaneTakeoff, SlidersHorizontal } from "lucide-react";
+import { Earth, PlaneTakeoff, SlidersHorizontal } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { useTranslation } from "@/lib/i18n";
 
@@ -16,7 +16,7 @@ export function HowItWorks() {
       step: t.howItWorks.step1Label,
       title: t.howItWorks.step1Title,
       description: t.howItWorks.step1Desc,
-      icon: Globe,
+      icon: Earth,
     },
     {
       step: t.howItWorks.step2Label,

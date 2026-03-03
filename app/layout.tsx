@@ -16,10 +16,37 @@ const brandFont = Comfortaa({
   weight: ["300", "400", "500", "600", "700"],
 });
 
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://alltrips.netlify.app";
+
 export const metadata: Metadata = {
-  title: "AllTrips | Turn Spending Into Global Adventures",
+  metadataBase: new URL(siteUrl),
+  title: "AllTrips | Your Dreams, Our Routes",
   description:
-    "AllTrips is a modern fintech travel app that transforms everyday spending into miles you can redeem for flights directly inside the app.",
+    "AllTrips is a Baku-based travel agency that plans unforgettable trips to top destinations worldwide. Let us handle flights, hotels, and tours — you just enjoy the journey.",
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    siteName: "AllTrips",
+    title: "AllTrips | Your Dreams, Our Routes",
+    description:
+      "AllTrips is a Baku-based travel agency that plans unforgettable trips to top destinations worldwide. Let us handle flights, hotels, and tours — you just enjoy the journey.",
+    images: [
+      {
+        url: "/main_background.jpg",
+        width: 1600,
+        height: 900,
+        alt: "AllTrips — travel agency based in Baku",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "AllTrips | Your Dreams, Our Routes",
+    description:
+      "AllTrips is a Baku-based travel agency that plans unforgettable trips to top destinations worldwide.",
+    images: ["/main_background.jpg"],
+  },
 };
 
 export default function RootLayout({

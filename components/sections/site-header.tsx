@@ -53,9 +53,9 @@ export function SiteHeader() {
           <Image
             src="/alltrips_logo.png"
             alt="AllTrips"
-            height={48}
-            width={160}
-            className="h-12 w-auto object-contain"
+            height={60}
+            width={200}
+            className="h-[60px] w-auto object-contain"
             priority
           />
         </button>
@@ -66,14 +66,14 @@ export function SiteHeader() {
               key={item.id}
               type="button"
               onClick={() => smoothScrollTo(item.id)}
-              className="text-sm font-medium tracking-wide text-slate-900 transition hover:text-slate-700"
+              className="inline-flex h-[60px] items-center text-sm font-medium tracking-wide text-slate-900 transition hover:text-slate-700"
             >
               {item.label}
             </button>
           ))}
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex h-[60px] items-center gap-2">
           <LanguageSelector />
         </div>
       </div>

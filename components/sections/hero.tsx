@@ -2,13 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { DownloadButton } from "@/components/ui/download-button";
 import { useTranslation } from "@/lib/i18n";
-
-const GOOGLE_PLAY_LINK =
-  "https://play.google.com/store/apps/details?id=az.premiumbank.all_miles.app&hl=en";
-const APP_STORE_LINK =
-  "https://apps.apple.com/in/app/premium-bank-allmiles/id6740502033";
 
 function HeroCopy() {
   const { t } = useTranslation();
@@ -27,7 +21,7 @@ function HeroCopy() {
     >
       <h1 className="max-w-3xl text-[clamp(2.25rem,6vw,5.2rem)] font-semibold leading-[0.94] tracking-[-0.04em] text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.5)]">
         {t.hero.headline}{" "}
-        <span className="animate-shimmer bg-gradient-to-r from-[#FAFA00] via-[#7dd3fc] to-[#0EAAFD] bg-clip-text text-transparent">
+        <span className="animate-shimmer bg-gradient-to-r from-[#00C853] via-[#7dd3fc] to-[#0EAAFD] bg-clip-text text-transparent">
           AllTrips
         </span>
       </h1>
@@ -36,10 +30,7 @@ function HeroCopy() {
         {t.hero.subtitle}
       </p>
 
-      <div className="mt-9 flex flex-wrap items-center gap-3">
-        <DownloadButton href={GOOGLE_PLAY_LINK} store="google-play" />
-        <DownloadButton href={APP_STORE_LINK} store="app-store" />
-      </div>
+      <div className="mt-9" />
 
       <div className="mt-8 grid max-w-[520px] grid-cols-3 gap-3">
         {stats.map((stat) => (

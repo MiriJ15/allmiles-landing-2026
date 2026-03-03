@@ -1,13 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { DownloadButton } from "@/components/ui/download-button";
 import { useTranslation } from "@/lib/i18n";
-
-const GOOGLE_PLAY_LINK =
-  "https://play.google.com/store/apps/details?id=az.premiumbank.all_miles.app&hl=en";
-const APP_STORE_LINK =
-  "https://apps.apple.com/in/app/premium-bank-allmiles/id6740502033";
 
 export function BottomCta() {
   const { t } = useTranslation();
@@ -23,18 +17,13 @@ export function BottomCta() {
           className="glass-panel relative overflow-hidden rounded-[2rem] px-6 py-10 sm:px-12 sm:py-14"
         >
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_0%_0%,rgba(14,170,253,0.35),transparent_34%),radial-gradient(circle_at_100%_100%,rgba(250,250,0,0.18),transparent_34%)]" />
-          <p className="text-sm uppercase tracking-[0.26em] text-[#0EAAFD] dark:text-[#FAFA00]">
+          <p className="text-sm uppercase tracking-[0.26em] text-[#0EAAFD]">
             {t.cta.label}
           </p>
-          <h2 className="mt-3 max-w-3xl text-[clamp(1.8rem,4.6vw,3.8rem)] font-semibold leading-[0.96] tracking-[-0.03em] text-slate-900 dark:text-white">
+          <h2 className="mt-3 max-w-3xl text-[clamp(1.8rem,4.6vw,3.8rem)] font-semibold leading-[0.96] tracking-[-0.03em] text-slate-900">
             {t.cta.headline}
           </h2>
           <p className="section-subtitle mt-4 max-w-2xl">{t.cta.subtitle}</p>
-
-          <div className="mt-8 flex flex-wrap gap-3">
-            <DownloadButton href={GOOGLE_PLAY_LINK} store="google-play" />
-            <DownloadButton href={APP_STORE_LINK} store="app-store" />
-          </div>
         </motion.div>
       </div>
     </section>

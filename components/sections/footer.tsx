@@ -1,22 +1,27 @@
-import { Instagram, Linkedin, Twitter } from "lucide-react";
+"use client";
 
-const footerLinks = [
-  { label: "Terms of Service", href: "#" },
-  { label: "Privacy Policy", href: "#" }
-];
+import { Instagram, Linkedin, Twitter } from "lucide-react";
+import { useTranslation } from "@/lib/i18n";
 
 const socialLinks = [
   { label: "X", href: "#", icon: Twitter },
   { label: "Instagram", href: "#", icon: Instagram },
-  { label: "LinkedIn", href: "#", icon: Linkedin }
+  { label: "LinkedIn", href: "#", icon: Linkedin },
 ];
 
 export function Footer() {
+  const { t } = useTranslation();
+
+  const footerLinks = [
+    { label: t.footer.terms, href: "#" },
+    { label: t.footer.privacy, href: "#" },
+  ];
+
   return (
     <footer className="border-t border-slate-200 py-8 dark:border-white/10">
       <div className="container-shell flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-slate-600 dark:text-slate-300">
-          (c) 2026 AllMiles. Crafted for global travelers.
+          {t.footer.copyright}
         </p>
 
         <div className="flex flex-wrap items-center gap-4 sm:gap-6">

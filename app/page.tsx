@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/hero";
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { PartnerMarquee } from "@/components/sections/partner-marquee";
 import { SiteHeader } from "@/components/sections/site-header";
+import { ScrollToTop } from "@/components/ui/scroll-to-top";
 
 export default function HomePage() {
   return (
@@ -17,6 +18,7 @@ export default function HomePage() {
       <PartnerMarquee />
       <BottomCta />
       <Footer />
+      <ScrollToTop />
     </main>
   );
 }

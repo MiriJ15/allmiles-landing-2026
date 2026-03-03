@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { DownloadButton } from "@/components/ui/download-button";
+import { useTranslation } from "@/lib/i18n";
 
 const GOOGLE_PLAY_LINK =
   "https://play.google.com/store/apps/details?id=az.premiumbank.all_miles.app&hl=en";
@@ -9,6 +10,8 @@ const APP_STORE_LINK =
   "https://apps.apple.com/in/app/premium-bank-allmiles/id6740502033";
 
 export function BottomCta() {
+  const { t } = useTranslation();
+
   return (
     <section className="pb-16 pt-8 sm:pb-20">
       <div className="container-shell">
@@ -21,15 +24,12 @@ export function BottomCta() {
         >
           <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_0%_0%,rgba(56,189,248,0.35),transparent_34%),radial-gradient(circle_at_100%_100%,rgba(16,185,129,0.28),transparent_34%)]" />
           <p className="text-sm uppercase tracking-[0.26em] text-sky-700 dark:text-cyan-100">
-            Start your journey
+            {t.cta.label}
           </p>
           <h2 className="mt-3 max-w-3xl text-[clamp(1.8rem,4.6vw,3.8rem)] font-semibold leading-[0.96] tracking-[-0.03em] text-slate-900 dark:text-white">
-            Download AllMiles Today and Convert Everyday Spending Into Takeoff Moments.
+            {t.cta.headline}
           </h2>
-          <p className="section-subtitle mt-4 max-w-2xl">
-            Unlock instant miles, premium routes, and a smarter way to travel with every
-            payment you make.
-          </p>
+          <p className="section-subtitle mt-4 max-w-2xl">{t.cta.subtitle}</p>
 
           <div className="mt-8 flex flex-wrap gap-3">
             <DownloadButton href={GOOGLE_PLAY_LINK} store="google-play" />

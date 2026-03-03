@@ -3,25 +3,33 @@
 import { motion } from "framer-motion";
 import { Download, PlaneTakeoff } from "lucide-react";
 import { DownloadButton } from "@/components/ui/download-button";
+import { useTranslation } from "@/lib/i18n";
 
 const GOOGLE_PLAY_LINK =
   "https://play.google.com/store/apps/details?id=az.premiumbank.all_miles.app&hl=en";
 const APP_STORE_LINK =
   "https://apps.apple.com/in/app/premium-bank-allmiles/id6740502033";
 
-const departureRows = [
-  ["GYD", "PAR", "A7", "Boarding"],
-  ["GYD", "DXB", "B3", "On Time"],
-  ["GYD", "LON", "C2", "Gate Open"],
-  ["GYD", "TYO", "A4", "Priority"]
-];
+const departureData = [
+  { from: "GYD", to: "PAR", gate: "A7", statusKey: "statusBoarding" },
+  { from: "GYD", to: "DXB", gate: "B3", statusKey: "statusOnTime" },
+  { from: "GYD", to: "LON", gate: "C2", statusKey: "statusGateOpen" },
+  { from: "GYD", to: "TYO", gate: "A4", statusKey: "statusPriority" },
+] as const;
 
 const barcodePattern = [
-  1, 2, 1, 3, 1, 1, 2, 1, 4, 1, 2, 3, 1, 2, 1, 3, 1, 1, 2, 1, 3, 2, 1, 4,
-  1, 2, 1, 3, 1, 1, 2, 3, 1, 2, 1, 4, 1, 2, 1, 3, 1, 1, 2, 1, 3, 2, 1, 4
+  1, 2, 1, 3, 1, 1, 2, 1, 4, 1, 2, 3, 1, 2, 1, 3, 1, 1, 2, 1, 3, 2, 1, 4, 1, 2,
+  1, 3, 1, 1, 2, 3, 1, 2, 1, 4, 1, 2, 1, 3, 1, 1, 2, 1, 3, 2, 1, 4,
 ];
 
 function HeroCopy() {
+  const { t } = useTranslation();
+  const stats = [
+    { value: "1M+", label: t.hero.statsMonthly },
+    { value: "120+", label: t.hero.statsRoutes },
+    { value: "<30s", label: t.hero.statsRedemption },
+  ];
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 24 }}
@@ -30,15 +38,14 @@ function HeroCopy() {
       className="relative z-10"
     >
       <h1 className="max-w-3xl text-[clamp(2.25rem,6vw,5.2rem)] font-semibold leading-[0.94] tracking-[-0.04em] text-slate-900 dark:text-white">
-        Turn Everyday Spending into Global Adventures with{" "}
+        {t.hero.headline}{" "}
         <span className="animate-shimmer bg-gradient-to-r from-cyan-200 via-sky-400 to-emerald-300 bg-clip-text text-transparent">
           AllMiles
         </span>
       </h1>
 
       <p className="section-subtitle mt-6 max-w-2xl text-balance">
-        Earn cashback as miles from your daily purchases and redeem flights instantly
-        inside the app. No manual transfer, no friction, just takeoff.
+        {t.hero.subtitle}
       </p>
 
       <div className="mt-9 flex flex-wrap items-center gap-3">
@@ -47,13 +54,14 @@ function HeroCopy() {
       </div>
 
       <div className="mt-8 grid max-w-[760px] grid-cols-3 gap-3">
-        {[
-          { value: "1M+", label: "Miles redeemed monthly" },
-          { value: "120+", label: "Routes" },
-          { value: "<30s", label: "Flight redemption flow" }
-        ].map((stat) => (
-          <div key={stat.label} className="glass-panel rounded-2xl px-4 py-3 text-center">
-            <p className="text-xl font-semibold text-slate-900 dark:text-white">{stat.value}</p>
+        {stats.map((stat) => (
+          <div
+            key={stat.label}
+            className="glass-panel rounded-2xl px-4 py-3 text-center"
+          >
+            <p className="text-xl font-semibold text-slate-900 dark:text-white">
+              {stat.value}
+            </p>
             <p className="text-xs uppercase tracking-[0.16em] text-slate-600 dark:text-slate-300">
               {stat.label}
             </p>
@@ -65,6 +73,14 @@ function HeroCopy() {
 }
 
 function InfiniteDepartureTicker() {
+  const { t } = useTranslation();
+  const rows = departureData.map((d) => ({
+    from: d.from,
+    to: d.to,
+    gate: d.gate,
+    status: t.hero[d.statusKey],
+  }));
+
   return (
     <div className="relative mt-2 h-[120px] overflow-hidden">
       <motion.div
@@ -74,15 +90,15 @@ function InfiniteDepartureTicker() {
       >
         {[0, 1].map((copyIndex) => (
           <div key={copyIndex} className="space-y-3 pb-3 text-sm">
-            {departureRows.map((row, rowIndex) => (
+            {rows.map((row, rowIndex) => (
               <div
-                key={`${copyIndex}-${rowIndex}-${row[1]}`}
+                key={`${copyIndex}-${rowIndex}-${row.to}`}
                 className="grid grid-cols-4 text-slate-800 dark:text-slate-200"
               >
-                <span>{row[0]}</span>
-                <span>{row[1]}</span>
-                <span>{row[2]}</span>
-                <span className="text-cyan-300">{row[3]}</span>
+                <span>{row.from}</span>
+                <span>{row.to}</span>
+                <span>{row.gate}</span>
+                <span className="text-cyan-300">{row.status}</span>
               </div>
             ))}
           </div>
@@ -115,8 +131,8 @@ function AllMilesBarcode() {
         </div>
 
         <motion.div
-          className="pointer-events-none absolute inset-y-0 left-0 w-14 bg-gradient-to-r from-transparent via-cyan-200/45 to-transparent"
-          animate={{ x: ["-150%", "180%"] }}
+          className="pointer-events-none absolute inset-y-0 w-14 bg-gradient-to-r from-transparent via-cyan-200/45 to-transparent"
+          animate={{ left: ["-3.5rem", "100%"] }}
           transition={{ duration: 2.6, repeat: Infinity, ease: "linear" }}
         />
       </div>
@@ -129,6 +145,8 @@ function AllMilesBarcode() {
 }
 
 function HeroVisualBoarding() {
+  const { t } = useTranslation();
+
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.96, y: 26 }}
@@ -151,7 +169,9 @@ function HeroVisualBoarding() {
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-cyan-200" />
           </span>
           <PlaneTakeoff size={12} className="text-cyan-300" />
-          <span className="uppercase tracking-[0.12em]">Route Sync Live</span>
+          <span className="uppercase tracking-[0.12em]">
+            {t.hero.routeSync}
+          </span>
         </motion.div>
 
         <div className="glass-panel relative overflow-hidden rounded-[2.6rem] border-white/25 p-7 sm:p-9">
@@ -166,13 +186,13 @@ function HeroVisualBoarding() {
           <div className="relative space-y-4">
             <div className="glass-panel rounded-2xl p-4 font-mono">
               <p className="text-[0.64rem] uppercase tracking-[0.2em] text-slate-600 dark:text-slate-300">
-                Live Departure Board
+                {t.hero.departureBoard}
               </p>
               <div className="mt-3 grid grid-cols-4 text-[0.66rem] uppercase tracking-[0.14em] text-slate-500 dark:text-slate-400">
-                <span>From</span>
-                <span>To</span>
-                <span>Gate</span>
-                <span>Status</span>
+                <span>{t.hero.colFrom}</span>
+                <span>{t.hero.colTo}</span>
+                <span>{t.hero.colGate}</span>
+                <span>{t.hero.colStatus}</span>
               </div>
 
               <InfiniteDepartureTicker />
@@ -183,14 +203,14 @@ function HeroVisualBoarding() {
               <div className="absolute -right-4 top-1/2 h-8 w-8 -translate-y-1/2 rounded-full bg-[var(--bg-primary)]" />
 
               <p className="text-[0.64rem] uppercase tracking-[0.2em] text-slate-600 dark:text-slate-300">
-                Boarding Pass Preview
+                {t.hero.boardingPassPreview}
               </p>
               <div className="mt-2 flex items-end justify-between">
                 <div>
                   <p className="text-3xl font-semibold tracking-tight text-slate-900 dark:text-white">
                     GYD to CDG
                   </p>
-                  <p className="mt-1 text-sm text-cyan-300">Seat 2A | Priority Lane</p>
+                  <p className="mt-1 text-sm text-cyan-300">{t.hero.seat}</p>
                 </div>
                 <p className="text-sm font-semibold text-slate-700 dark:text-slate-200">
                   22,300 miles

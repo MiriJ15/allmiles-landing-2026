@@ -3,14 +3,18 @@
 import { motion } from "framer-motion";
 import { Compass } from "lucide-react";
 import { ThemeToggle } from "@/components/theme-toggle";
-
-const navItems = [
-  { label: "How It Works", id: "how-it-works" },
-  { label: "Destinations", id: "destinations" },
-  { label: "Partners", id: "partners" }
-];
+import { LanguageSelector } from "@/components/ui/language-selector";
+import { useTranslation } from "@/lib/i18n";
 
 export function SiteHeader() {
+  const { t } = useTranslation();
+
+  const navItems = [
+    { label: t.nav.howItWorks, id: "how-it-works" },
+    { label: t.nav.destinations, id: "destinations" },
+    { label: t.nav.partners, id: "partners" },
+  ];
+
   const smoothScrollTo = (id: string) => {
     if (id === "top") {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -57,7 +61,10 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <ThemeToggle />
+        <div className="flex items-center gap-2">
+          <LanguageSelector />
+          <ThemeToggle />
+        </div>
       </div>
     </motion.header>
   );

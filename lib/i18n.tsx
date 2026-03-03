@@ -65,6 +65,9 @@ export interface Translations {
     subtitle: string;
     contactUs: string;
   };
+  contact: {
+    address: string;
+  };
   footer: {
     copyright: string;
     terms: string;
@@ -147,6 +150,9 @@ const translations: Record<Locale, Translations> = {
       terms: "Terms of Service",
       privacy: "Privacy Policy",
     },
+    contact: {
+      address: "84 Alimardan Bey Topchibashov St, Baku",
+    },
   },
 
   ru: {
@@ -223,6 +229,9 @@ const translations: Record<Locale, Translations> = {
       terms: "Условия использования",
       privacy: "Политика конфиденциальности",
     },
+    contact: {
+      address: "ул. Алимардан Бей Топчубашов, 84, Баку",
+    },
   },
 
   az: {
@@ -298,6 +307,9 @@ const translations: Record<Locale, Translations> = {
       copyright: "© 2026 AllTrips. Dünya səyyahları üçün yaradılmışdır.",
       terms: "Xidmət şərtləri",
       privacy: "Məxfilik siyasəti",
+    },
+    contact: {
+      address: "Əlimərdan Bəy Topçubaşov 84, Bakı",
     },
   },
 };

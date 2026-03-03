@@ -33,15 +33,18 @@ const contacts = [
     label: "@alltripsaz",
     href: "https://instagram.com/alltripsaz",
   },
-  {
-    icon: <MapPin size={18} />,
-    label: "Əlimərdan Bəy Topçubaşov 84",
-    href: "https://maps.google.com/maps?q=Əlimərdan+Bəy+Topçubaşov+84,+Baku,+Azerbaijan",
-  },
 ];
 
 export function BottomCta() {
   const { t } = useTranslation();
+  const allContacts = [
+    ...contacts,
+    {
+      icon: <MapPin size={18} />,
+      label: t.contact.address,
+      href: "https://maps.google.com/maps?q=Əlimərdan+Bəy+Topçubaşov+84,+Baku,+Azerbaijan",
+    },
+  ];
 
   return (
     <section className="pb-16 pt-8 sm:pb-20">
@@ -74,7 +77,7 @@ export function BottomCta() {
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400 mb-1">
                 {t.cta.contactUs}
               </p>
-              {contacts.map((item) =>
+              {allContacts.map((item) =>
                 item.href ? (
                   <a
                     key={item.label}

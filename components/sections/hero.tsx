@@ -13,35 +13,39 @@ function WhatsAppIcon({ size = 18 }: { size?: number }) {
   );
 }
 
-const contacts = [
-  {
-    icon: <Mail size={18} />,
-    label: "info@all-trips.az",
-    href: "mailto:info@all-trips.az",
-  },
-  {
-    icon: <Phone size={18} />,
-    label: "+994 55 455 88 88",
-    href: "tel:+994554558888",
-  },
-  {
-    icon: <WhatsAppIcon size={18} />,
-    label: "+994 55 455 88 88 (WhatsApp)",
-    href: "https://wa.me/994554558888",
-  },
-  {
-    icon: <Instagram size={18} />,
-    label: "@alltripsaz",
-    href: "https://instagram.com/alltripsaz",
-  },
-  {
-    icon: <MapPin size={18} />,
-    label: "Əlimərdan Bəy Topçubaşov 84",
-    href: "https://maps.google.com/maps?q=Əlimərdan+Bəy+Topçubaşov+84,+Baku,+Azerbaijan",
-  },
-];
+function buildContacts(address: string) {
+  return [
+    {
+      icon: <Mail size={18} />,
+      label: "info@all-trips.az",
+      href: "mailto:info@all-trips.az",
+    },
+    {
+      icon: <Phone size={18} />,
+      label: "+994 55 455 88 88",
+      href: "tel:+994554558888",
+    },
+    {
+      icon: <WhatsAppIcon size={18} />,
+      label: "+994 55 455 88 88 (WhatsApp)",
+      href: "https://wa.me/994554558888",
+    },
+    {
+      icon: <Instagram size={18} />,
+      label: "@alltripsaz",
+      href: "https://instagram.com/alltripsaz",
+    },
+    {
+      icon: <MapPin size={18} />,
+      label: address,
+      href: "https://maps.google.com/maps?q=Əlimərdan+Bəy+Topçubaşov+84,+Baku,+Azerbaijan",
+    },
+  ];
+}
 
-function ContactRow({ item }: { item: (typeof contacts)[number] }) {
+type ContactItem = ReturnType<typeof buildContacts>[number];
+
+function ContactRow({ item }: { item: ContactItem }) {
   const inner = (
     <>
       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white/70 transition group-hover:border-white/40 group-hover:bg-white/20 group-hover:text-white">
@@ -66,6 +70,7 @@ function ContactRow({ item }: { item: (typeof contacts)[number] }) {
 
 function ContactCard() {
   const { t } = useTranslation();
+  const contacts = buildContacts(t.contact.address);
   return (
     <motion.div
       initial={{ opacity: 0, x: 32 }}
@@ -87,6 +92,7 @@ function ContactCard() {
 
 function HeroCopy() {
   const { t } = useTranslation();
+  const contacts = buildContacts(t.contact.address);
   const stats = [
     { value: "10,000+", label: t.hero.statsMonthly },
     { value: "120+", label: t.hero.statsRoutes },
@@ -118,7 +124,7 @@ function HeroCopy() {
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="rounded-xl border border-white/25 bg-white/15 px-2 py-3 text-center backdrop-blur-sm"
+            className="relative cursor-default rounded-xl border border-white/25 bg-white/15 px-2 py-3 text-center backdrop-blur-sm transition-all duration-200 hover:z-10 hover:scale-110 hover:border-white/50 hover:bg-white/25 hover:shadow-lg"
           >
             <p className="text-lg font-semibold text-white">{stat.value}</p>
             <p className="text-[10px] uppercase leading-tight tracking-wide text-white/80">
@@ -140,7 +146,10 @@ function HeroCopy() {
 
 export function Hero() {
   return (
-    <section id="top" className="relative overflow-hidden pb-20 pt-16 sm:pt-24">
+    <section
+      id="top"
+      className="relative overflow-hidden -mt-20 pb-20 pt-36 sm:pt-44"
+    >
       <Image
         src="/main_background.jpg"
         alt=""

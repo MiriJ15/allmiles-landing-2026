@@ -38,10 +38,13 @@ export interface Translations {
   howItWorks: {
     title: string;
     subtitle: string;
+    step1Label: string;
     step1Title: string;
     step1Desc: string;
+    step2Label: string;
     step2Title: string;
     step2Desc: string;
+    step3Label: string;
     step3Title: string;
     step3Desc: string;
   };
@@ -50,6 +53,7 @@ export interface Translations {
     subtitle: string;
     fare: string;
     flyTo: (city: string, miles: string) => string;
+    cityNames: Record<string, string>;
   };
   partners: {
     title: string;
@@ -59,6 +63,7 @@ export interface Translations {
     label: string;
     headline: string;
     subtitle: string;
+    contactUs: string;
   };
   footer: {
     copyright: string;
@@ -97,13 +102,16 @@ const translations: Record<Locale, Translations> = {
     howItWorks: {
       title: "How It Works",
       subtitle:
-        "A streamlined 3-step mechanism designed for zero friction between spending, earning, and travel redemption.",
+        "A streamlined 3-step process designed for a seamless journey from planning and booking to your final departure.",
+      step1Label: "Step 01",
       step1Title: "Choose Your Destination",
       step1Desc:
         "Browse our curated selection of global destinations, from relaxing beach resorts to vibrant city breaks.",
+      step2Label: "Step 02",
       step2Title: "Customize Your Trip",
       step2Desc:
         "Work with our travel experts to perfectly tailor flights, accommodations, and tours to your preferences and budget.",
+      step3Label: "Step 03",
       step3Title: "Pack & Depart",
       step3Desc:
         "Receive your comprehensive itinerary and travel documents in one place. Your dream vacation is ready.",
@@ -111,9 +119,16 @@ const translations: Record<Locale, Translations> = {
     destinations: {
       title: "Popular Destinations",
       subtitle:
-        "From city breaks to long-haul escapes, see where your everyday purchases can take you next.",
+        "From quick city breaks to exotic long-haul escapes, see where our expertly crafted tours can take you next.",
       fare: "AllTrips Fare",
       flyTo: (city, miles) => `Fly to ${city} from ${miles} miles`,
+      cityNames: {
+        London: "London",
+        Dubai: "Dubai",
+        Paris: "Paris",
+        Tokyo: "Tokyo",
+        "New York": "New York",
+      },
     },
     partners: {
       title: "Partner Airlines",
@@ -122,10 +137,10 @@ const translations: Record<Locale, Translations> = {
     },
     cta: {
       label: "Start your journey",
-      headline:
-        "Plan Your Next Getaway Today and Turn Your Dream Vacation Into Reality.",
+      headline: "Make Your Dream Trip a Reality.",
       subtitle:
         "Unlock exclusive deals, premium routes, and a smarter way to travel with our expert guidance.",
+      contactUs: "Contact Us",
     },
     footer: {
       copyright: "© 2026 AllTrips. Crafted for global travelers.",
@@ -163,13 +178,16 @@ const translations: Record<Locale, Translations> = {
     howItWorks: {
       title: "Как это работает",
       subtitle:
-        "Оптимизированный механизм из 3 шагов, разработанный для нулевого трения между тратами, накоплением и использованием миль.",
+        "Оптимизированный 3-этапный процесс, созданный для идеального путешествия от планирования и бронирования до самого вылета.",
+      step1Label: "Шаг 01",
       step1Title: "Выберите Направление",
       step1Desc:
         "Просмотрите нашу тщательно подобранную коллекцию мировых направлений, от пляжных курортов до ярких городских туров.",
+      step2Label: "Шаг 02",
       step2Title: "Настройте Свою Поездку",
       step2Desc:
         "Работайте с нашими экспертами по туризму, чтобы идеально подобрать рейсы, отели и туры под ваши предпочтения и бюджет.",
+      step3Label: "Шаг 03",
       step3Title: "Собирайте Вещи и В Путь",
       step3Desc:
         "Получите полный маршрут и проездные документы в одном месте. Ваш отпуск мечты готов.",
@@ -177,9 +195,16 @@ const translations: Record<Locale, Translations> = {
     destinations: {
       title: "Популярные направления",
       subtitle:
-        "От коротких городских поездок до дальних путешествий — узнайте, куда вас могут привести ежедневные покупки.",
+        "От коротких городских туров до экзотических дальних путешествий — посмотрите, куда вас могут привести наши профессионально составленные туры.",
       fare: "Тариф AllTrips",
       flyTo: (city, miles) => `Летите в ${city} от ${miles} миль`,
+      cityNames: {
+        London: "Лондон",
+        Dubai: "Дубай",
+        Paris: "Париж",
+        Tokyo: "Токио",
+        "New York": "Нью-Йорк",
+      },
     },
     partners: {
       title: "Авиакомпании-партнёры",
@@ -188,10 +213,10 @@ const translations: Record<Locale, Translations> = {
     },
     cta: {
       label: "Начните своё путешествие",
-      headline:
-        "Спланируйте Свой Следующий Отпуск Сегодня и Превратите Отдых Мечты в Реальность.",
+      headline: "Воплотите путешествие мечты в реальность.",
       subtitle:
         "Откройте для себя эксклюзивные предложения, премиум-маршруты и более умный способ путешествовать с нашей экспертной поддержкой.",
+      contactUs: "Свяжитесь с нами",
     },
     footer: {
       copyright: "© 2026 AllTrips. Создано для путешественников со всего мира.",
@@ -229,13 +254,16 @@ const translations: Record<Locale, Translations> = {
     howItWorks: {
       title: "Necə işləyir",
       subtitle:
-        "Xərcləmə, qazanma və mil istifadəsi arasında sıfır sürtünmə üçün nəzərdə tutulmuş sadələşdirilmiş 3 addımlı mexanizm.",
+        "Planlaşdırma və sifarişdən tutmuş yola düşməyə qədər qüsursuz bir səyahət üçün nəzərdə tutulmuş sadələşdirilmiş 3 addımlıq proses.",
+      step1Label: "Addım 01",
       step1Title: "İstiqamətinizi Seçin",
       step1Desc:
         "Dincəldici çimərlik kurortlarından tutmuş canlı şəhər turlarına qədər, seçilmiş qlobal istiqamətlərimizi nəzərdən keçirin.",
+      step2Label: "Addım 02",
       step2Title: "Səyahətinizi Özəlləşdirin",
       step2Desc:
         "Uçuşları, otelləri və turları tam olaraq büdcənizə və istəklərinizə uyğunlaşdırmaq üçün səyahət mütəxəssislərimizlə işləyin.",
+      step3Label: "Addım 03",
       step3Title: "Hazırlaşın və Yola Düşün",
       step3Desc:
         "Bütün səyahət planınızı və sənədlərinizi bir yerdə əldə edin. Xəyalınızdakı tətil hazırdır.",
@@ -243,9 +271,16 @@ const translations: Record<Locale, Translations> = {
     destinations: {
       title: "Populyar istiqamətlər",
       subtitle:
-        "Şəhər gəzintilərindən uzaq məsafəli səfərlərə qədər — gündəlik alış-verişlərinin sizi hara apara biləcəyini görün.",
+        "Qısamüddətli şəhər turlarından tutmuş ekzotik uzaq məsafəli səyahətlərə qədər, ekspertlərimiz tərəfindən hazırlanmış turların sizi hara apara biləcəyini kəşf edin.",
       fare: "AllTrips Tarifi",
       flyTo: (city, miles) => `${city}-ə ${miles} mildən uçun`,
+      cityNames: {
+        London: "London",
+        Dubai: "Dubay",
+        Paris: "Paris",
+        Tokyo: "Tokio",
+        "New York": "Nyu-York",
+      },
     },
     partners: {
       title: "Tərəfdaş hava yolları",
@@ -254,10 +289,10 @@ const translations: Record<Locale, Translations> = {
     },
     cta: {
       label: "Səyahətinizə başlayın",
-      headline:
-        "Növbəti Tətilinizi Bu Gün Planlaşdırın və Xəyalınızdakı Səyahəti Reallığa Çevirin.",
+      headline: "Xəyalınızdakı səyahəti reallığa çevirin.",
       subtitle:
         "Mütəxəssis rəhbərliyimizlə eksklüziv təklifləri, premium marşrutları və daha ağıllı səyahət yolunu kəşf edin.",
+      contactUs: "Bizimlə əlaqə",
     },
     footer: {
       copyright: "© 2026 AllTrips. Dünya səyyahları üçün yaradılmışdır.",

@@ -13,35 +13,59 @@ function WhatsAppIcon({ size = 18 }: { size?: number }) {
   );
 }
 
-function ContactCard() {
-  const contacts = [
-    {
-      icon: <Mail size={18} />,
-      label: "info@all-trips.az",
-      href: "mailto:info@all-trips.az",
-    },
-    {
-      icon: <Phone size={18} />,
-      label: "+994 55 455 88 88",
-      href: "tel:+994554558888",
-    },
-    {
-      icon: <WhatsAppIcon size={18} />,
-      label: "+994 55 455 88 88 (WhatsApp)",
-      href: "https://wa.me/994554558888",
-    },
-    {
-      icon: <Instagram size={18} />,
-      label: "@alltripsaz",
-      href: "https://instagram.com/alltripsaz",
-    },
-    {
-      icon: <MapPin size={18} />,
-      label: "Əlimərdan Bəy Topçubaşov 84",
-      href: "https://maps.google.com/maps?q=Əlimərdan+Bəy+Topçubaşov+84,+Baku,+Azerbaijan",
-    },
-  ];
+const contacts = [
+  {
+    icon: <Mail size={18} />,
+    label: "info@all-trips.az",
+    href: "mailto:info@all-trips.az",
+  },
+  {
+    icon: <Phone size={18} />,
+    label: "+994 55 455 88 88",
+    href: "tel:+994554558888",
+  },
+  {
+    icon: <WhatsAppIcon size={18} />,
+    label: "+994 55 455 88 88 (WhatsApp)",
+    href: "https://wa.me/994554558888",
+  },
+  {
+    icon: <Instagram size={18} />,
+    label: "@alltripsaz",
+    href: "https://instagram.com/alltripsaz",
+  },
+  {
+    icon: <MapPin size={18} />,
+    label: "Əlimərdan Bəy Topçubaşov 84",
+    href: "https://maps.google.com/maps?q=Əlimərdan+Bəy+Topçubaşov+84,+Baku,+Azerbaijan",
+  },
+];
 
+function ContactRow({ item }: { item: (typeof contacts)[number] }) {
+  const inner = (
+    <>
+      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white/70 transition group-hover:border-white/40 group-hover:bg-white/20 group-hover:text-white">
+        {item.icon}
+      </span>
+      <span className="text-sm leading-snug">{item.label}</span>
+    </>
+  );
+  return item.href ? (
+    <a
+      href={item.href}
+      target={item.href.startsWith("http") ? "_blank" : undefined}
+      rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+      className="flex items-center gap-3 text-white/90 transition hover:text-white group"
+    >
+      {inner}
+    </a>
+  ) : (
+    <div className="flex items-center gap-3 text-white/80">{inner}</div>
+  );
+}
+
+function ContactCard() {
+  const { t } = useTranslation();
   return (
     <motion.div
       initial={{ opacity: 0, x: 32 }}
@@ -51,34 +75,11 @@ function ContactCard() {
     >
       <div className="rounded-2xl border border-white/25 bg-white/10 backdrop-blur-md p-6 flex flex-col gap-4">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-white/60 mb-1">
-          Contact Us
+          {t.cta.contactUs}
         </p>
-        {contacts.map((item) =>
-          item.href ? (
-            <a
-              key={item.label}
-              href={item.href}
-              target={item.href.startsWith("http") ? "_blank" : undefined}
-              rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="flex items-center gap-3 text-white/90 transition hover:text-white group"
-            >
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white/70 transition group-hover:border-white/40 group-hover:bg-white/20 group-hover:text-white">
-                {item.icon}
-              </span>
-              <span className="text-sm leading-snug">{item.label}</span>
-            </a>
-          ) : (
-            <div
-              key={item.label}
-              className="flex items-center gap-3 text-white/80"
-            >
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white/70">
-                {item.icon}
-              </span>
-              <span className="text-sm leading-snug">{item.label}</span>
-            </div>
-          ),
-        )}
+        {contacts.map((item) => (
+          <ContactRow key={item.label} item={item} />
+        ))}
       </div>
     </motion.div>
   );
@@ -113,17 +114,24 @@ function HeroCopy() {
 
       <div className="mt-9" />
 
-      <div className="mt-8 grid max-w-[520px] grid-cols-3 gap-3">
+      <div className="mt-6 grid grid-cols-3 gap-2">
         {stats.map((stat) => (
           <div
             key={stat.label}
-            className="rounded-2xl border border-white/25 bg-white/15 px-4 py-3 text-center backdrop-blur-sm"
+            className="rounded-xl border border-white/25 bg-white/15 px-2 py-3 text-center backdrop-blur-sm"
           >
-            <p className="text-xl font-semibold text-white">{stat.value}</p>
-            <p className="text-xs uppercase tracking-[0.16em] text-white/80">
+            <p className="text-lg font-semibold text-white">{stat.value}</p>
+            <p className="text-[10px] uppercase leading-tight tracking-wide text-white/80">
               {stat.label}
             </p>
           </div>
+        ))}
+      </div>
+
+      {/* Mobile-only contact list */}
+      <div className="mt-5 grid grid-cols-2 gap-x-4 gap-y-3 lg:hidden">
+        {contacts.map((item) => (
+          <ContactRow key={item.label} item={item} />
         ))}
       </div>
     </motion.div>

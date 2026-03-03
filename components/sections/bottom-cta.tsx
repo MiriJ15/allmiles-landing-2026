@@ -64,13 +64,15 @@ export function BottomCta() {
               <h2 className="mt-3 max-w-3xl text-[clamp(1.8rem,4.6vw,3.8rem)] font-semibold leading-[0.96] tracking-[-0.03em] text-slate-900">
                 {t.cta.headline}
               </h2>
-              <p className="section-subtitle mt-4 max-w-2xl">{t.cta.subtitle}</p>
+              <p className="section-subtitle mt-4 max-w-2xl">
+                {t.cta.subtitle}
+              </p>
             </div>
 
             {/* Contact card */}
             <div className="flex flex-col gap-3 rounded-2xl border border-slate-200/80 bg-white/50 p-5 backdrop-blur-sm">
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-slate-400 mb-1">
-                Contact Us
+                {t.cta.contactUs}
               </p>
               {contacts.map((item) =>
                 item.href ? (
@@ -78,7 +80,11 @@ export function BottomCta() {
                     key={item.label}
                     href={item.href}
                     target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                    rel={
+                      item.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                     className="flex items-center gap-3 text-slate-700 transition hover:text-[#0EAAFD] group"
                   >
                     <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-400 transition group-hover:border-[#0EAAFD]/40 group-hover:bg-[#0EAAFD]/5 group-hover:text-[#0EAAFD]">

@@ -82,11 +82,13 @@ export function Destinations() {
                         {t.destinations.fare}
                       </p>
                       <p className="mt-1 text-2xl font-semibold text-white">
-                        {destination.city}
+                        {t.destinations.cityNames[destination.city] ??
+                          destination.city}
                       </p>
                       <p className="mt-1 text-sm text-white/85">
                         {t.destinations.flyTo(
-                          destination.city,
+                          t.destinations.cityNames[destination.city] ??
+                            destination.city,
                           destination.miles,
                         )}
                       </p>

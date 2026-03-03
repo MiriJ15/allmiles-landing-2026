@@ -26,11 +26,10 @@ export function PartnerMarquee() {
       <div className="container-shell">
         <Reveal>
           <h2 className="section-title max-w-3xl text-slate-900 dark:text-white">
-            Partner Airlines
+            {t.partners.title}
           </h2>
           <p className="section-subtitle mt-4 max-w-2xl">
-            Built for scale with regional leaders and world-class global
-            carriers.
+            {t.partners.subtitle}
           </p>
         </Reveal>
       </div>

@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { useScroll, useMotionValueEvent } from "framer-motion";
-import { CreditCard, PlaneTakeoff, WalletCards } from "lucide-react";
+import { Globe, PlaneTakeoff, SlidersHorizontal } from "lucide-react";
 import { Reveal } from "@/components/ui/reveal";
 import { useTranslation } from "@/lib/i18n";
 
@@ -13,19 +13,19 @@ export function HowItWorks() {
 
   const steps = [
     {
-      step: "Step 01",
+      step: t.howItWorks.step1Label,
       title: t.howItWorks.step1Title,
       description: t.howItWorks.step1Desc,
-      icon: CreditCard,
+      icon: Globe,
     },
     {
-      step: "Step 02",
+      step: t.howItWorks.step2Label,
       title: t.howItWorks.step2Title,
       description: t.howItWorks.step2Desc,
-      icon: WalletCards,
+      icon: SlidersHorizontal,
     },
     {
-      step: "Step 03",
+      step: t.howItWorks.step3Label,
       title: t.howItWorks.step3Title,
       description: t.howItWorks.step3Desc,
       icon: PlaneTakeoff,

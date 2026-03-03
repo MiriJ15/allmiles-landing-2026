@@ -75,12 +75,12 @@ const translations: Record<Locale, Translations> = {
       partners: "Partners",
     },
     hero: {
-      headline: "Turn Everyday Spending into Global Adventures with",
+      headline: "Your Gateway to Global Adventures.",
       subtitle:
-        "Earn cashback as miles from your daily purchases and redeem flights instantly inside the app. No manual transfer, no friction, just takeoff.",
-      statsMonthly: "Miles redeemed monthly",
-      statsRoutes: "Routes",
-      statsRedemption: "Redemption flow",
+        "Discover tailored vacation packages, exclusive flight deals, and premium hotel stays. We handle the planning so you can simply enjoy the takeoff.",
+      statsMonthly: "Happy Travelers",
+      statsRoutes: "Global Destinations",
+      statsRedemption: "Expert Support",
       departureBoard: "Live Departure Board",
       colFrom: "From",
       colTo: "To",
@@ -98,15 +98,15 @@ const translations: Record<Locale, Translations> = {
       title: "How It Works",
       subtitle:
         "A streamlined 3-step mechanism designed for zero friction between spending, earning, and travel redemption.",
-      step1Title: "Shop & Spend",
+      step1Title: "Choose Your Destination",
       step1Desc:
-        "Connect your card in seconds or pay through the app. Every everyday transaction becomes a travel opportunity.",
-      step2Title: "Earn Miles Automatically",
+        "Browse our curated selection of global destinations, from relaxing beach resorts to vibrant city breaks.",
+      step2Title: "Customize Your Trip",
       step2Desc:
-        "Cashback converts to miles in real time, with transparent tracking and premium partner boosters built in.",
-      step3Title: "Redeem & Fly",
+        "Work with our travel experts to perfectly tailor flights, accommodations, and tours to your preferences and budget.",
+      step3Title: "Pack & Depart",
       step3Desc:
-        "Search routes and book flights directly in AllTrips using your balance. Your miles are your ticket.",
+        "Receive your comprehensive itinerary and travel documents in one place. Your dream vacation is ready.",
     },
     destinations: {
       title: "Popular Destinations",
@@ -123,9 +123,9 @@ const translations: Record<Locale, Translations> = {
     cta: {
       label: "Start your journey",
       headline:
-        "Download AllTrips Today and Convert Everyday Spending Into Takeoff Moments.",
+        "Plan Your Next Getaway Today and Turn Your Dream Vacation Into Reality.",
       subtitle:
-        "Unlock instant miles, premium routes, and a smarter way to travel with every payment you make.",
+        "Unlock exclusive deals, premium routes, and a smarter way to travel with our expert guidance.",
     },
     footer: {
       copyright: "© 2026 AllTrips. Crafted for global travelers.",
@@ -141,12 +141,12 @@ const translations: Record<Locale, Translations> = {
       partners: "Партнёры",
     },
     hero: {
-      headline: "Превращайте повседневные траты в глобальные приключения с",
+      headline: "Ваш Путеводитель в Мировые Приключения.",
       subtitle:
-        "Зарабатывайте кэшбэк в виде миль за ежедневные покупки и мгновенно обменивайте их на авиабилеты прямо в приложении. Без ручных переводов, без лишних шагов — просто взлёт.",
-      statsMonthly: "Миль обменивается ежемесячно",
-      statsRoutes: "Маршрутов",
-      statsRedemption: "Время обмена",
+        "Откройте для себя индивидуальные турпакеты, эксклюзивные предложения на перелеты и проживание в премиум-отелях. Мы берем планирование на себя, чтобы вы могли просто наслаждаться полетом.",
+      statsMonthly: "Счастливых путешественников",
+      statsRoutes: "Мировых направлений",
+      statsRedemption: "Поддержка экспертов",
       departureBoard: "Табло вылетов",
       colFrom: "Откуда",
       colTo: "Куда",
@@ -164,15 +164,15 @@ const translations: Record<Locale, Translations> = {
       title: "Как это работает",
       subtitle:
         "Оптимизированный механизм из 3 шагов, разработанный для нулевого трения между тратами, накоплением и использованием миль.",
-      step1Title: "Покупайте и тратьте",
+      step1Title: "Выберите Направление",
       step1Desc:
-        "Подключите карту за несколько секунд или оплачивайте через приложение. Каждая ежедневная транзакция становится возможностью для путешествия.",
-      step2Title: "Зарабатывайте мили автоматически",
+        "Просмотрите нашу тщательно подобранную коллекцию мировых направлений, от пляжных курортов до ярких городских туров.",
+      step2Title: "Настройте Свою Поездку",
       step2Desc:
-        "Кэшбэк конвертируется в мили в реальном времени с прозрачным отслеживанием и бонусами от премиум-партнёров.",
-      step3Title: "Обменяйте и летите",
+        "Работайте с нашими экспертами по туризму, чтобы идеально подобрать рейсы, отели и туры под ваши предпочтения и бюджет.",
+      step3Title: "Собирайте Вещи и В Путь",
       step3Desc:
-        "Ищите маршруты и бронируйте авиабилеты прямо в AllTrips, используя свой баланс. Ваши мили — ваш билет.",
+        "Получите полный маршрут и проездные документы в одном месте. Ваш отпуск мечты готов.",
     },
     destinations: {
       title: "Популярные направления",
@@ -189,9 +189,9 @@ const translations: Record<Locale, Translations> = {
     cta: {
       label: "Начните своё путешествие",
       headline:
-        "Скачайте AllTrips сегодня и превращайте повседневные траты в моменты взлёта.",
+        "Спланируйте Свой Следующий Отпуск Сегодня и Превратите Отдых Мечты в Реальность.",
       subtitle:
-        "Открывайте мгновенные мили, премиум-маршруты и более умный способ путешествовать с каждым платежом.",
+        "Откройте для себя эксклюзивные предложения, премиум-маршруты и более умный способ путешествовать с нашей экспертной поддержкой.",
     },
     footer: {
       copyright: "© 2026 AllTrips. Создано для путешественников со всего мира.",
@@ -207,12 +207,12 @@ const translations: Record<Locale, Translations> = {
       partners: "Tərəfdaşlar",
     },
     hero: {
-      headline: "Gündəlik xərclərini dünya macəralarına çevir",
+      headline: "Qlobal Macəraləra Açılan Qapınız.",
       subtitle:
-        "Gündəlik alış-verişlərinizdən mil olaraq keşbek qazanın və birbaşa tətbiq daxilindən uçuşlara xərləyin. Əl ilə köçürmə yox, sürtünmə yox — sadəcə qalxış.",
-      statsMonthly: "Aylıq istifadə edilən mil",
-      statsRoutes: "Marşrut",
-      statsRedemption: "Xərcləmə müddəti",
+        "Sizə özəl tətil paketləri, eksklüziv uçuş təklifləri və premium otel rezervasiyalarını kəşf edin. Siz sadəcə uçuşdan zövq alın, planlaşdırmanı bizə buraxın.",
+      statsMonthly: "Xoşbəxt Səyahətçi",
+      statsRoutes: "Qlobal İstiqamət",
+      statsRedemption: "Ekspert Dəstəyi",
       departureBoard: "Canlı uçuş lövhəsi",
       colFrom: "Haradan",
       colTo: "Hara",
@@ -230,15 +230,15 @@ const translations: Record<Locale, Translations> = {
       title: "Necə işləyir",
       subtitle:
         "Xərcləmə, qazanma və mil istifadəsi arasında sıfır sürtünmə üçün nəzərdə tutulmuş sadələşdirilmiş 3 addımlı mexanizm.",
-      step1Title: "Al və xərclə",
+      step1Title: "İstiqamətinizi Seçin",
       step1Desc:
-        "Kartınızı saniyələr içində qoşun və ya tətbiq vasitəsilə ödəyin. Hər gündəlik əməliyyat səyahət fürsətinə çevrilir.",
-      step2Title: "Milləri avtomatik qazanın",
+        "Dincəldici çimərlik kurortlarından tutmuş canlı şəhər turlarına qədər, seçilmiş qlobal istiqamətlərimizi nəzərdən keçirin.",
+      step2Title: "Səyahətinizi Özəlləşdirin",
       step2Desc:
-        "Keşbek real vaxt rejimində millərə çevrilir, şəffaf izləmə və premium tərəfdaş bonusları ilə.",
-      step3Title: "Xərcləyin və uçun",
+        "Uçuşları, otelləri və turları tam olaraq büdcənizə və istəklərinizə uyğunlaşdırmaq üçün səyahət mütəxəssislərimizlə işləyin.",
+      step3Title: "Hazırlaşın və Yola Düşün",
       step3Desc:
-        "AllTrips-da marşrutları axtarın və balansınızdan istifadə edərək birbaşa bilet sifariş edin. Milləriniz — biletinizdir.",
+        "Bütün səyahət planınızı və sənədlərinizi bir yerdə əldə edin. Xəyalınızdakı tətil hazırdır.",
     },
     destinations: {
       title: "Populyar istiqamətlər",
@@ -255,9 +255,9 @@ const translations: Record<Locale, Translations> = {
     cta: {
       label: "Səyahətinizə başlayın",
       headline:
-        "AllTrips-ı bu gün yükləyin və gündəlik xərclərinizi qalxış anlarına çevirin.",
+        "Növbəti Tətilinizi Bu Gün Planlaşdırın və Xəyalınızdakı Səyahəti Reallığa Çevirin.",
       subtitle:
-        "Hər ödənişlə ani millər, premium marşrutlar və daha ağıllı səyahət yolunu açın.",
+        "Mütəxəssis rəhbərliyimizlə eksklüziv təklifləri, premium marşrutları və daha ağıllı səyahət yolunu kəşf edin.",
     },
     footer: {
       copyright: "© 2026 AllTrips. Dünya səyyahları üçün yaradılmışdır.",

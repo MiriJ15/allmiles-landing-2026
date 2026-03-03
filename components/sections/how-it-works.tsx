@@ -54,12 +54,11 @@ export function HowItWorks() {
       >
         <div className="container-shell">
           <Reveal>
-            <h2 className="section-title max-w-3xl text-slate-900 dark:text-white">
-              How It Works
+            <h2 className="section-title max-w-3xl text-slate-900">
+              {t.howItWorks.title}
             </h2>
             <p className="section-subtitle mt-4 max-w-2xl">
-              A streamlined 3-step mechanism designed for zero friction between
-              spending, earning, and travel redemption.
+              {t.howItWorks.subtitle}
             </p>
           </Reveal>
 

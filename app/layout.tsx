@@ -21,19 +21,19 @@ const siteUrl =
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "AllTrips | Your Dreams, Our Routes",
+  title: "AllTrips — Baku Travel Agency | Your Dreams, Our Routes",
   description:
-    "AllTrips is a Baku-based travel agency that plans unforgettable trips to top destinations worldwide. Let us handle flights, hotels, and tours — you just enjoy the journey.",
+    "AllTrips is a Baku-based travel agency offering flights, hotels & tours to top destinations worldwide. Book your dream trip with our expert team.",
   openGraph: {
     type: "website",
     url: siteUrl,
     siteName: "AllTrips",
-    title: "AllTrips | Your Dreams, Our Routes",
+    title: "AllTrips — Baku Travel Agency | Your Dreams, Our Routes",
     description:
-      "AllTrips is a Baku-based travel agency that plans unforgettable trips to top destinations worldwide. Let us handle flights, hotels, and tours — you just enjoy the journey.",
+      "AllTrips is a Baku-based travel agency offering flights, hotels & tours to top destinations worldwide. Book your dream trip with our expert team.",
     images: [
       {
-        url: "/metadata.png",
+        url: "/metadata_new.png",
         width: 1200,
         height: 630,
         alt: "AllTrips — travel agency based in Baku",
@@ -42,10 +42,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AllTrips | Your Dreams, Our Routes",
+    title: "AllTrips — Baku Travel Agency | Your Dreams, Our Routes",
     description:
-      "AllTrips is a Baku-based travel agency that plans unforgettable trips to top destinations worldwide.",
-    images: ["/metadata.png"],
+      "AllTrips is a Baku-based travel agency offering flights, hotels & tours to top destinations. Book your dream trip with our expert team.",
+    images: ["/metadata_new.png"],
   },
 };
 

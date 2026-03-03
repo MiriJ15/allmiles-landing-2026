@@ -5,34 +5,113 @@ import { Reveal } from "@/components/ui/reveal";
 
 const destinations = [
   {
+    city: "Budapest",
+    miles: "120",
+    image: "/budapest.png",
+  },
+  {
+    city: "Rome",
+    miles: "120",
+    image:
+      "https://images.unsplash.com/photo-1552832230-c0197dd311b5?auto=format&fit=crop&w=1600&q=80",
+  },
+  {
+    city: "Tbilisi",
+    miles: "130",
+    image:
+      "https://images.unsplash.com/photo-1565008576549-57569a49371d?auto=format&fit=crop&w=1600&q=80",
+  },
+  {
+    city: "Aktau",
+    miles: "135",
+    image:
+      "https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?auto=format&fit=crop&w=1600&q=80",
+  },
+  {
+    city: "Izmir",
+    miles: "140",
+    image: "/izmir.png",
+  },
+  {
+    city: "Istanbul",
+    miles: "155",
+    image:
+      "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?auto=format&fit=crop&w=1600&q=80",
+  },
+  {
+    city: "Tashkent",
+    miles: "160",
+    image: "/tashkent.png",
+  },
+  {
+    city: "Antalya",
+    miles: "175",
+    image: "/antalya.png",
+  },
+  {
+    city: "Abu Dhabi",
+    miles: "215",
+    image: "/abudhabi.png",
+  },
+  {
     city: "London",
-    miles: "27,500",
+    miles: "215",
     image:
       "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    city: "Dubai",
-    miles: "19,900",
+    city: "Prague",
+    miles: "220",
     image:
-      "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1519677100203-a0e668c92439?auto=format&fit=crop&w=1600&q=80",
+  },
+  {
+    city: "New Delhi",
+    miles: "220",
+    image: "/new_delhi.png",
+  },
+  {
+    city: "Milan",
+    miles: "225",
+    image: "/milan.png",
+  },
+  {
+    city: "Moscow",
+    miles: "230",
+    image:
+      "https://images.unsplash.com/photo-1513326738677-b964603b136d?auto=format&fit=crop&w=1600&q=80",
+  },
+  {
+    city: "Jeddah",
+    miles: "250",
+    image: "/jeddah.png",
+  },
+  {
+    city: "Bishkek",
+    miles: "265",
+    image: "/bishkek.png",
   },
   {
     city: "Paris",
-    miles: "24,600",
+    miles: "320",
+    image: "/paris.png",
+  },
+  {
+    city: "Beijing",
+    miles: "360",
     image:
-      "https://images.unsplash.com/photo-1499856871958-5b9627545d1a?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&w=1600&q=80",
+  },
+  {
+    city: "Saint Petersburg",
+    miles: "375",
+    image: "/saint_petersbourg.png",
   },
   {
     city: "Tokyo",
-    miles: "41,000",
+    miles: "620",
     image:
       "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    city: "New York",
-    miles: "29,300",
-    image:
-      "https://images.unsplash.com/photo-1499092346589-b9b6be3e94b2?auto=format&fit=crop&w=1600&q=80",
   },
 ];
 

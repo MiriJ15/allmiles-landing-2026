@@ -149,11 +149,11 @@ h6 {
 }
 
 .animate-marquee {
-  animation: marquee 34s linear infinite;
+  animation: marquee 120s linear infinite;
 }
 
 .animate-marquee-third {
-  animation: marquee-third 34s linear infinite;
+  animation: marquee-third 120s linear infinite;
 }
 
 .animate-shimmer {

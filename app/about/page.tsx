@@ -16,7 +16,7 @@ export default function AboutPage() {
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(160deg,rgba(255,255,255,0.96),rgba(240,249,255,0.9)_50%,rgba(224,244,255,0.85))]" />
       <SiteHeader />
 
-      <section className="container-shell py-20 sm:py-28">
+      <section className="container-shell py-10 sm:py-14">
         {/* Heading + Globe */}
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div className="max-w-xl">

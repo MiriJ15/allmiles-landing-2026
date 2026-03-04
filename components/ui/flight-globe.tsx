@@ -118,8 +118,10 @@ export function FlightGlobe() {
   const handleGlobeReady = () => {
     const controls = globeEl.current?.controls();
     if (!controls) return;
+    // Start view centred on the Atlantic Ocean
+    globeEl.current?.pointOfView({ lat: 10, lng: -30, altitude: 2.5 }, 0);
     controls.autoRotate = true;
-    controls.autoRotateSpeed = 0.8;
+    controls.autoRotateSpeed = -1; // negative = anticlockwise
     controls.enableZoom = false;
     controls.enablePan = false;
     controls.enableRotate = false;

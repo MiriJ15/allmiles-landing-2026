@@ -1,12 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 import { LanguageSelector } from "@/components/ui/language-selector";
 import { useTranslation } from "@/lib/i18n";
 
 export function SiteHeader() {
   const { t } = useTranslation();
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   const navItems = [
     { label: t.nav.howItWorks, id: "how-it-works" },
@@ -32,32 +36,61 @@ export function SiteHeader() {
       className="sticky top-0 z-50 border-b border-white/20 bg-white/20 backdrop-blur-2xl transition-all duration-300"
     >
       <div className="container-shell flex h-20 items-center justify-between gap-4">
-        <button
-          type="button"
-          onClick={() => smoothScrollTo("top")}
-          className="inline-flex items-center gap-2"
-        >
-          <Image
-            src="/alltrips_logo.png"
-            alt="AllTrips"
-            height={60}
-            width={200}
-            className="h-[60px] w-auto object-contain"
-            priority
-          />
-        </button>
+        {isHome ? (
+          <button
+            type="button"
+            onClick={() => smoothScrollTo("top")}
+            className="inline-flex items-center gap-2"
+          >
+            <Image
+              src="/alltrips_logo.png"
+              alt="AllTrips"
+              height={60}
+              width={200}
+              className="h-[60px] w-auto object-contain"
+              priority
+            />
+          </button>
+        ) : (
+          <Link href="/" className="inline-flex items-center gap-2">
+            <Image
+              src="/alltrips_logo.png"
+              alt="AllTrips"
+              height={60}
+              width={200}
+              className="h-[60px] w-auto object-contain"
+              priority
+            />
+          </Link>
+        )}
 
         <nav className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => smoothScrollTo(item.id)}
-              className="inline-flex h-[60px] items-center text-base font-medium tracking-wide text-slate-900 transition hover:text-slate-700"
-            >
-              {item.label}
-            </button>
-          ))}
+          {navItems.map((item) =>
+            isHome ? (
+              <button
+                key={item.id}
+                type="button"
+                onClick={() => smoothScrollTo(item.id)}
+                className="inline-flex h-[60px] items-center text-base font-medium tracking-wide text-slate-900 transition hover:text-slate-700"
+              >
+                {item.label}
+              </button>
+            ) : (
+              <Link
+                key={item.id}
+                href={`/#${item.id}`}
+                className="inline-flex h-[60px] items-center text-base font-medium tracking-wide text-slate-900 transition hover:text-slate-700"
+              >
+                {item.label}
+              </Link>
+            ),
+          )}
+          <Link
+            href="/about"
+            className="inline-flex h-[60px] items-center text-base font-medium tracking-wide text-slate-900 transition hover:text-slate-700"
+          >
+            {t.nav.aboutUs}
+          </Link>
         </nav>
 
         <div className="flex h-[60px] items-center gap-2">

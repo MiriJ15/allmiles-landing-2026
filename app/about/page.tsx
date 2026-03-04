@@ -43,11 +43,17 @@ export default function AboutPage() {
         {/* Two-column: mission + values */}
         <div className="grid gap-12 lg:grid-cols-2">
           <div>
-            <h2 className="text-xl font-semibold text-slate-900">{a.missionTitle}</h2>
-            <p className="mt-4 leading-relaxed text-slate-600">{a.missionBody}</p>
+            <h2 className="text-xl font-semibold text-slate-900">
+              {a.missionTitle}
+            </h2>
+            <p className="mt-4 leading-relaxed text-slate-600">
+              {a.missionBody}
+            </p>
           </div>
           <div>
-            <h2 className="text-xl font-semibold text-slate-900">{a.whyTitle}</h2>
+            <h2 className="text-xl font-semibold text-slate-900">
+              {a.whyTitle}
+            </h2>
             <ul className="mt-4 space-y-3 text-slate-600">
               {a.whyItems.map((item) => (
                 <li key={item} className="flex items-start gap-2">
@@ -64,7 +70,9 @@ export default function AboutPage() {
 
         {/* Contact */}
         <div className="max-w-xl">
-          <h2 className="text-xl font-semibold text-slate-900">{a.contactTitle}</h2>
+          <h2 className="text-xl font-semibold text-slate-900">
+            {a.contactTitle}
+          </h2>
           <ul className="mt-6 space-y-4">
             {[
               {
@@ -119,4 +127,3 @@ export default function AboutPage() {
     </main>
   );
 }
-

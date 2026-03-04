@@ -230,8 +230,14 @@ const translations: Record<Locale, Translations> = {
           title: "2. Cancellation Policy",
           body: "Cancellations are strictly governed by the rules and regulations of the specific third-party provider (e.g., the airline or hotel).",
           items: [
-            { label: "Non-Refundable Bookings", text: "Many fares, deposits, and packages are strictly non-refundable according to the provider's rules. In such cases, Alltrips cannot issue a refund." },
-            { label: "Partial Refunds", text: "If the third-party provider permits a partial refund, Alltrips will process the refund according to their specified terms and amounts." },
+            {
+              label: "Non-Refundable Bookings",
+              text: "Many fares, deposits, and packages are strictly non-refundable according to the provider's rules. In such cases, Alltrips cannot issue a refund.",
+            },
+            {
+              label: "Partial Refunds",
+              text: "If the third-party provider permits a partial refund, Alltrips will process the refund according to their specified terms and amounts.",
+            },
           ],
         },
       ],
@@ -248,8 +254,14 @@ const translations: Record<Locale, Translations> = {
           title: "2. Fees and Penalties",
           body: "If a change, upgrade, or modification is permitted by the provider, the following charges will apply:",
           items: [
-            { label: "Provider Fees", text: "You are responsible for all fines, penalties, fare differences, and upgrade fees set by the airline, hotel, transfer company, or other representatives." },
-            { label: "Alltrips Service Charge", text: "In addition to the third-party fees, Alltrips applies an administrative service charge for processing any modifications to your booking." },
+            {
+              label: "Provider Fees",
+              text: "You are responsible for all fines, penalties, fare differences, and upgrade fees set by the airline, hotel, transfer company, or other representatives.",
+            },
+            {
+              label: "Alltrips Service Charge",
+              text: "In addition to the third-party fees, Alltrips applies an administrative service charge for processing any modifications to your booking.",
+            },
           ],
         },
       ],
@@ -261,7 +273,8 @@ const translations: Record<Locale, Translations> = {
       body: "AllTrips is a Baku-based travel agency. We help our clients plan unforgettable journeys to the world's finest destinations — from airline tickets and hotel reservations to tour packages and visa services, we handle everything for you.",
       voen: '"ALL TRIPS MMC" Şirkəti (VÖEN: 1502660521)',
       missionTitle: "Our Mission",
-      missionBody: "Making the world accessible to everyone. Whether it's a budget Tbilisi getaway or a luxury Dubai package — we find the best option for your needs and take all the stress out of the process.",
+      missionBody:
+        "Making the world accessible to everyone. Whether it's a budget Tbilisi getaway or a luxury Dubai package — we find the best option for your needs and take all the stress out of the process.",
       whyTitle: "Why AllTrips?",
       whyItems: [
         "10,000+ happy travelers",
@@ -399,8 +412,14 @@ const translations: Record<Locale, Translations> = {
           title: "2. Политика отмены",
           body: "Отмена бронирования строго регулируется правилами и нормами конкретного стороннего поставщика (например, авиакомпании или отеля).",
           items: [
-            { label: "Невозвратные бронирования", text: "Многие тарифы, депозиты и пакеты являются строго невозвратными в соответствии с правилами поставщика. В таких случаях Alltrips не может осуществить возврат средств." },
-            { label: "Частичный возврат", text: "Если сторонний поставщик разрешает частичный возврат, Alltrips обработает возврат в соответствии с их указанными условиями и суммами." },
+            {
+              label: "Невозвратные бронирования",
+              text: "Многие тарифы, депозиты и пакеты являются строго невозвратными в соответствии с правилами поставщика. В таких случаях Alltrips не может осуществить возврат средств.",
+            },
+            {
+              label: "Частичный возврат",
+              text: "Если сторонний поставщик разрешает частичный возврат, Alltrips обработает возврат в соответствии с их указанными условиями и суммами.",
+            },
           ],
         },
       ],
@@ -417,8 +436,14 @@ const translations: Record<Locale, Translations> = {
           title: "2. Сборы и штрафы",
           body: "Если поставщик разрешает изменение, повышение класса обслуживания (апгрейд) или модификацию, будут применяться следующие сборы:",
           items: [
-            { label: "Сборы поставщика", text: "Вы несете ответственность за все штрафы, разницу в тарифах и сборы за повышение класса обслуживания, установленные авиакомпанией, отелем, трансферной компанией или другими представителями." },
-            { label: "Сервисный сбор Alltrips", text: "В дополнение к сборам третьих лиц, Alltrips взимает административный сервисный сбор за обработку любых изменений в вашем бронировании." },
+            {
+              label: "Сборы поставщика",
+              text: "Вы несете ответственность за все штрафы, разницу в тарифах и сборы за повышение класса обслуживания, установленные авиакомпанией, отелем, трансферной компанией или другими представителями.",
+            },
+            {
+              label: "Сервисный сбор Alltrips",
+              text: "В дополнение к сборам третьих лиц, Alltrips взимает административный сервисный сбор за обработку любых изменений в вашем бронировании.",
+            },
           ],
         },
       ],
@@ -430,7 +455,8 @@ const translations: Record<Locale, Translations> = {
       body: "AllTrips — туристическое агентство из Баку. Мы помогаем клиентам планировать незабываемые поездки в лучшие уголки мира — от авиабилетов и бронирования отелей до турпакетов и визовых услуг, мы берём всё на себя.",
       voen: '"ALL TRIPS MMC" Şirkəti (VÖEN: 1502660521)',
       missionTitle: "Наша миссия",
-      missionBody: "Сделать мир доступным для каждого. Будь то бюджетная поездка в Тбилиси или роскошный тур в Дубай — мы находим лучший вариант под ваши нужды и берём весь стресс на себя.",
+      missionBody:
+        "Сделать мир доступным для каждого. Будь то бюджетная поездка в Тбилиси или роскошный тур в Дубай — мы находим лучший вариант под ваши нужды и берём весь стресс на себя.",
       whyTitle: "Почему AllTrips?",
       whyItems: [
         "10 000+ довольных путешественников",
@@ -568,8 +594,14 @@ const translations: Record<Locale, Translations> = {
           title: "2. Ləğvetmə Qaydaları",
           body: "Ləğvetmələr qəti şəkildə müvafiq üçüncü tərəf təminatçısının (məsələn, aviaşirkət və ya otel) qayda və nizamnamələri ilə tənzimlənir.",
           items: [
-            { label: "Qaytarılmayan Rezervasiyalar", text: "Bir çox tariflər, depozitlər və paketlər təminatçının qaydalarına əsasən qətiyyən geri qaytarılmır. Belə hallarda Alltrips ödənişi geri qaytara bilməz." },
-            { label: "Qismən Qaytarılma", text: "Əgər üçüncü tərəf təminatçısı qismən qaytarılmaya icazə verərsə, Alltrips ödənişin qaytarılmasını onların müəyyən etdiyi şərtlərə və məbləğlərə uyğun olaraq həyata keçirəcəkdir." },
+            {
+              label: "Qaytarılmayan Rezervasiyalar",
+              text: "Bir çox tariflər, depozitlər və paketlər təminatçının qaydalarına əsasən qətiyyən geri qaytarılmır. Belə hallarda Alltrips ödənişi geri qaytara bilməz.",
+            },
+            {
+              label: "Qismən Qaytarılma",
+              text: "Əgər üçüncü tərəf təminatçısı qismən qaytarılmaya icazə verərsə, Alltrips ödənişin qaytarılmasını onların müəyyən etdiyi şərtlərə və məbləğlərə uyğun olaraq həyata keçirəcəkdir.",
+            },
           ],
         },
       ],
@@ -586,8 +618,14 @@ const translations: Record<Locale, Translations> = {
           title: "2. Rüsumlar və Cərimələr",
           body: "Təminatçı tərəfindən dəyişiklik, dərəcənin artırılması və ya düzəlişə icazə verilərsə, aşağıdakı rüsumlar tətbiq olunacaq:",
           items: [
-            { label: "Təminatçı Rüsumları", text: "Aviaşirkət, otel, transfer şirkəti və ya digər nümayəndələr tərəfindən müəyyən edilmiş bütün cərimələr, tarif fərqləri və xidmət sinfinin artırılması rüsumlarına görə siz məsuliyyət daşıyırsınız." },
-            { label: "Alltrips Xidmət Haqqı", text: "Üçüncü tərəf rüsumlarına əlavə olaraq, Alltrips rezervasiyanızda hər hansı bir dəyişikliyin həyata keçirilməsi üçün inzibati xidmət haqqı tətbiq edir." },
+            {
+              label: "Təminatçı Rüsumları",
+              text: "Aviaşirkət, otel, transfer şirkəti və ya digər nümayəndələr tərəfindən müəyyən edilmiş bütün cərimələr, tarif fərqləri və xidmət sinfinin artırılması rüsumlarına görə siz məsuliyyət daşıyırsınız.",
+            },
+            {
+              label: "Alltrips Xidmət Haqqı",
+              text: "Üçüncü tərəf rüsumlarına əlavə olaraq, Alltrips rezervasiyanızda hər hansı bir dəyişikliyin həyata keçirilməsi üçün inzibati xidmət haqqı tətbiq edir.",
+            },
           ],
         },
       ],
@@ -599,7 +637,8 @@ const translations: Record<Locale, Translations> = {
       body: "AllTrips, Bakı əsaslı bir səyahət agentliyidir. Biz müştərilərimizə dünya üzrə ən yaxşı istiqamətlərə unudulmaz səyahətlər planlamaqda kömək edirik — aviabiletdən tutmuş otel rezervasiyasına, turpaketdən visa xidmətlərinə qədər hər şeyi sizin üçün təşkil edirik.",
       voen: '"ALL TRIPS MMC" Şirkəti (VÖEN: 1502660521)',
       missionTitle: "Missiyamız",
-      missionBody: "Hər kəs üçün dünyanı əlçatan etmək. İstər bütçəli bir Tbilisi gəzintisi, istər lüks bir Dubai paket turu — biz sizin ehtiyaclarınıza uyğun ən yaxşı variantı tapır, bütün prosesin stresini öz üzərimizə götürürük.",
+      missionBody:
+        "Hər kəs üçün dünyanı əlçatan etmək. İstər bütçəli bir Tbilisi gəzintisi, istər lüks bir Dubai paket turu — biz sizin ehtiyaclarınıza uyğun ən yaxşı variantı tapır, bütün prosesin stresini öz üzərimizə götürürük.",
       whyTitle: "Niyə AllTrips?",
       whyItems: [
         "10,000+ məmnun səyahətçi",

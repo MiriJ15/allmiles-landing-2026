@@ -44,7 +44,10 @@ function PolicyModal({
               {section.items && section.items.length > 0 && (
                 <ul className="mt-2 space-y-2 pl-3">
                   {section.items.map((item, j) => (
-                    <li key={j} className="text-sm leading-relaxed text-slate-600">
+                    <li
+                      key={j}
+                      className="text-sm leading-relaxed text-slate-600"
+                    >
                       <span className="font-medium text-slate-700">
                         {item.label}:
                       </span>{" "}
@@ -75,12 +78,12 @@ export function Footer() {
     activeModal === "privacy"
       ? privacyDoc
       : activeModal === "terms"
-      ? t.terms
-      : activeModal === "cancellation"
-      ? t.cancellation
-      : activeModal === "returnPolicy"
-      ? t.returnPolicy
-      : null;
+        ? t.terms
+        : activeModal === "cancellation"
+          ? t.cancellation
+          : activeModal === "returnPolicy"
+            ? t.returnPolicy
+            : null;
 
   return (
     <>

@@ -141,15 +141,15 @@ const translations: Record<Locale, Translations> = {
       step1Label: "Step 01",
       step1Title: "Choose Your Destination",
       step1Desc:
-        "Browse our curated selection of global destinations, from relaxing beach resorts to vibrant city breaks.",
+        "Discover diverse experiences — from exclusive beach resorts to a dynamic city atmosphere.",
       step2Label: "Step 02",
-      step2Title: "Customize Your Trip",
+      step2Title: "Plan Your Journey",
       step2Desc:
-        "Work with our travel experts to perfectly tailor flights, accommodations, and tours to your preferences and budget.",
+        "Create a tailor-made, seamless travel itinerary together with our expert team.",
       step3Label: "Step 03",
-      step3Title: "Pack & Depart",
+      step3Title: "Start Your Journey",
       step3Desc:
-        "Receive your comprehensive itinerary and travel documents in one place. Your dream vacation is ready.",
+        "All your plans and documents are ready – now all that's left is to enjoy the adventure.",
     },
     destinations: {
       title: "Popular Destinations",
@@ -321,17 +321,17 @@ const translations: Record<Locale, Translations> = {
       subtitle:
         "Оптимизированный 3-этапный процесс, созданный для идеального путешествия от планирования и бронирования до самого вылета.",
       step1Label: "Шаг 01",
-      step1Title: "Выберите Направление",
+      step1Title: "Выберите направление",
       step1Desc:
-        "Просмотрите нашу тщательно подобранную коллекцию мировых направлений, от пляжных курортов до ярких городских туров.",
+        "Откройте для себя разнообразные впечатления — от эксклюзивных пляжных курортов до динамичной городской атмосферы.",
       step2Label: "Шаг 02",
-      step2Title: "Настройте Свою Поездку",
+      step2Title: "Спланируйте своё путешествие",
       step2Desc:
-        "Работайте с нашими экспертами по туризму, чтобы идеально подобрать рейсы, отели и туры под ваши предпочтения и бюджет.",
+        "Вместе с нашей экспертной командой создайте идеальный маршрут, подобранный специально для вас.",
       step3Label: "Шаг 03",
-      step3Title: "Собирайте Вещи и В Путь",
+      step3Title: "Начните своё путешествие",
       step3Desc:
-        "Получите полный маршрут и проездные документы в одном месте. Ваш отпуск мечты готов.",
+        "Все документы и план путешествия уже готовы – теперь осталось лишь насладиться приключением.",
     },
     destinations: {
       title: "Популярные направления",
@@ -505,15 +505,15 @@ const translations: Record<Locale, Translations> = {
       step1Label: "Addım 01",
       step1Title: "İstiqamətinizi Seçin",
       step1Desc:
-        "Dincəldici çimərlik kurortlarından tutmuş canlı şəhər turlarına qədər, seçilmiş qlobal istiqamətlərimizi nəzərdən keçirin.",
+        "Eksklüziv çimərlik kurortlarından dinamik şəhər atmosferinə qədər fərqli təcrübələri yaşayın.",
       step2Label: "Addım 02",
-      step2Title: "Səyahətinizi Özəlləşdirin",
+      step2Title: "Səyahətinizi planlaşdırın",
       step2Desc:
-        "Uçuşları, otelləri və turları tam olaraq büdcənizə və istəklərinizə uyğunlaşdırmaq üçün səyahət mütəxəssislərimizlə işləyin.",
+        "Ekspert komandamızla birlikdə sizə uyğun, qüsursuz səyahət marşrutu yaradaq.",
       step3Label: "Addım 03",
-      step3Title: "Hazırlaşın və Yola Düşün",
+      step3Title: "Səyahətinizə başlayın",
       step3Desc:
-        "Bütün səyahət planınızı və sənədlərinizi bir yerdə əldə edin. Xəyalınızdakı tətil hazırdır.",
+        "Bütün plan və sənədlər hazır – sadəcə macəranı yaşamaq qalıb.",
     },
     destinations: {
       title: "Populyar istiqamətlər",
